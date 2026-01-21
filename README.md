@@ -97,7 +97,7 @@ DNS Domain (015) for naming consistency
 
 These options reflect common enterprise DHCP configurations.
 
-<img width="871" height="568" alt="DHCP_Scope_Configuration" src="https://github.com/user-attachments/assets/dc9749c1-ba50-4d44-aad1-65ba1378184f" />
+<img width="871" height="568" alt="DHCP_Scope_Configuration" src="https://github.com/user-attachments/assets/dc5bfa50-34d1-4488-8764-e0a58ad7f0c0" />
 
 ## 🖨️ DHCP Reservations
 
