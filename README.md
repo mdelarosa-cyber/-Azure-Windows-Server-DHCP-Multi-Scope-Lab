@@ -25,7 +25,7 @@ Verifying configuration through server tools
 
 Microsoft Azure
 
-Windows Server (latest)
+Windows Server (2025)
 
 DHCP Server Role
 
