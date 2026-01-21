@@ -62,7 +62,7 @@ Access: RDP (restricted to my IP)
 The Windows Server VM hosts the DHCP service and simulates an on-prem DHCP server.
 
 ## 📡 DHCP Scopes Configured
-###1. Users LAN
+### 1. Users LAN
 
 Range: 192.168.1.10 – 192.168.1.200
 
@@ -72,7 +72,7 @@ Lease: 8 hours
 
 Purpose: User devices
 
-###2. Corporate Voice (VoIP)
+### 2. Corporate Voice (VoIP)
 
 Range: 192.168.2.10 – 192.168.2.150
 
@@ -82,7 +82,7 @@ Lease: 1 day
 
 Purpose: Voice systems and gateways
 
-###3. Guest Wi-Fi
+### 3. Guest Wi-Fi
 
 Range: 192.168.3.50 – 192.168.3.250
 
