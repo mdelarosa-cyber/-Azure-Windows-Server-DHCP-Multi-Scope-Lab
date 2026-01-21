@@ -1,23 +1,9 @@
 # 📌 Azure Windows Server DHCP Multi-Scope Lab
 ## 📖 Project Overview
 
-This lab demonstrates hands-on experience configuring a Windows Server DHCP service in Microsoft Azure, simulating how DHCP is deployed and managed in a real corporate network environment.
+This project demonstrates hands-on experience configuring a Windows Server DHCP service in a simulated enterprise environment using Microsoft Azure. The lab focused on multi-scope DHCP configuration, exclusions, lease management, and reservations to reflect real-world network administration practices.
 
-The focus is on server-side DHCP administration, including:
-
-Installing the DHCP Server role
-
-Creating and managing multiple scopes
-
-Configuring exclusions and lease durations
-
-Setting DHCP options (Gateway, DNS, Domain)
-
-Creating reservations
-
-Validating configuration without client testing
-
-Due to Azure’s platform-managed networking, the lab emphasizes administrative configuration and validation rather than live client lease testing.
+I built the environment from scratch in Azure, deployed a Windows Server VM, installed the DHCP role, and configured multiple scopes representing different network segments such as users, voice systems, and guest Wi-Fi.
 
 ## 🎯 Objectives
 
@@ -61,102 +47,133 @@ Access: RDP (restricted to my IP)
 
 The Windows Server VM hosts the DHCP service and simulates an on-prem DHCP server.
 
-## 📡 DHCP Scopes Configured
-### 1. Users LAN
+## 📡 DHCP Configuration Summary
 
-Range: 192.168.1.10 – 192.168.1.200
+I configured the DHCP service to support multiple simulated network segments:
 
-Exclusions: 192.168.1.10 – 192.168.1.20
+Users LAN
 
-Lease: 8 hours
+Created a scope for standard user devices
 
-Purpose: User devices
+Defined an IP range for client systems
 
-### 2. Corporate Voice (VoIP)
+Added exclusions for infrastructure devices
 
-Range: 192.168.2.10 – 192.168.2.150
+Set an 8-hour lease duration
 
-Exclusions: 192.168.2.10 – 192.168.2.30
+Corporate Voice (VoIP)
 
-Lease: 1 day
+Built a separate scope for voice systems
 
-Purpose: Voice systems and gateways
+Reserved IP ranges for gateways and call managers
 
-### 3. Guest Wi-Fi
+Applied a longer 1-day lease
 
-Range: 192.168.3.50 – 192.168.3.250
+Guest Wi-Fi
 
-Exclusions: 192.168.3.50 – 192.168.3.60
+Created a scope for guest devices
 
-Lease: 2 hours
+Used short lease times (2 hours) for high device turnover
 
-Purpose: Guest and transient devices
+Protected wireless controller IPs with exclusions
 
-⚙️ DHCP Options Configured
+Each scope was activated and verified through the DHCP console.
 
-Each scope was configured with:
+## ⚙️ DHCP Options Configuration
 
-003 Router: 192.168.X.254
+For every scope, I configured:
 
-006 DNS Server: IP of dc1
+Default Gateway (003 Router) to simulate edge devices
 
-015 DNS Domain: lab.local
+DNS Server (006) pointing to the Windows Server
 
-These settings reflect real-world enterprise DHCP standards.
+DNS Domain (015) for naming consistency
 
-## 🖨️ DHCP Reservation Example
+These options reflect common enterprise DHCP configurations.
 
-A reservation was created for a network printer:
+## 🖨️ DHCP Reservations
 
-Name: Printer-01
+To demonstrate consistent device addressing without static IPs, I:
 
-IP: 192.168.1.15
+Created a reservation for a simulated printer
 
-MAC: Placeholder value
+Assigned a fixed IP tied to a MAC address
 
-Scope: Users LAN
+Placed the reservation under the correct scope
 
-This demonstrates how to maintain consistent IPs without static assignments.
+This mirrors how shared devices are managed in corporate networks.
 
 ## ✅ Configuration Validation
 
-The DHCP setup was verified using server-side checks:
+Since Azure does not allow Windows Server VMs to issue DHCP leases, I validated the setup using server-side checks:
 
-All scopes show Active
+Confirmed all scopes were active
 
-Exclusions fall inside scope ranges
+Verified exclusions were inside scope ranges
 
-DHCP options reflect correct values
+Ensured DHCP options were correctly applied
 
-Reservations appear under correct scopes
+Confirmed reservations appeared correctly
 
-DHCP service is running without errors
+Checked that the DHCP service was running
 
-This mirrors real-world hybrid and on-prem DHCP administration tasks.
+This reflects how administrators verify DHCP in real environments.
 
-## 📚 What I Learned
+## ☁️ Azure Networking Limitation
 
-This lab reinforced:
+Azure assigns IP addresses using its own platform-managed DHCP service.
+Because of this, a Windows Server VM cannot act as the authoritative DHCP server for Azure subnets.
 
-Enterprise DHCP design
+This lab focused on configuration and administration, which still directly maps to real-world on-prem and hybrid network management.
 
-Multi-scope management
+##  Key Takeaways
 
-Option configuration
+Through this lab, I learned:
 
-Lease strategy
+How to design multi-scope DHCP environments
 
-Reservation use cases
+Why exclusions must fall within scope ranges
 
-Server-side validation
+How lease duration impacts different device types
 
-Azure vs on-prem networking differences
+When to use reservations instead of static IPs
+
+How to validate DHCP without live clients
+
+## 📚 Skills Demonstrated
+
+This project demonstrates practical skills in:
+
+Windows Server Administration
+
+DHCP & IP Address Management
+
+Azure Infrastructure
+
+Network Services Configuration
+
+Troubleshooting & Validation
+
+Enterprise Network Design
+
+## 🧠 Reflection
+
+If this were deployed in an on-prem environment, client devices would receive leases directly from the Windows Server DHCP service. Future enhancements could include:
+
+Adding Active Directory integration
+
+Testing real DHCP leases with client VMs
+
+Implementing failover DHCP servers
+
+Expanding subnet designs
 
 🏁 Completion Checklist
 
-✔ All scopes created and active
-✔ Exclusions configured correctly
-✔ DHCP options set per scope
-✔ Logical lease durations applied
+✔ Windows Server deployed
+✔ DHCP role installed
+✔ Multiple scopes created
+✔ Exclusions configured
+✔ Options applied
 ✔ Reservation created
-✔ DHCP service running
+✔ Service validated
