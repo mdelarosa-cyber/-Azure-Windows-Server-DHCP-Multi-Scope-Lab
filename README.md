@@ -104,7 +104,7 @@ Each scope was configured with:
 
 These settings reflect real-world enterprise DHCP standards.
 
-🖨️ DHCP Reservation Example
+## 🖨️ DHCP Reservation Example
 
 A reservation was created for a network printer:
 
