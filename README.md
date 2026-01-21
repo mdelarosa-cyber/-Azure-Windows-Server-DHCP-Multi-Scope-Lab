@@ -79,6 +79,12 @@ Protected wireless controller IPs with exclusions
 
 Each scope was activated and verified through the DHCP console.
 
+<img width="628" height="391" alt="DHCP_Configured" src="https://github.com/user-attachments/assets/741d4a39-b1cc-4220-a9b1-4cb0f4211819" />
+
+<img width="401" height="456" alt="Lease_Times" src="https://github.com/user-attachments/assets/3e4bf3f9-387f-4f2a-80d8-960a09c8f924" />
+
+<img width="905" height="264" alt="IP_Exclusions" src="https://github.com/user-attachments/assets/ccbfa047-6c88-4f2e-b56b-305623074469" />
+
 ## ⚙️ DHCP Options Configuration
 
 For every scope, I configured:
@@ -91,6 +97,8 @@ DNS Domain (015) for naming consistency
 
 These options reflect common enterprise DHCP configurations.
 
+<img width="871" height="568" alt="DHCP_Scope_Configuration" src="https://github.com/user-attachments/assets/dc9749c1-ba50-4d44-aad1-65ba1378184f" />
+
 ## 🖨️ DHCP Reservations
 
 To demonstrate consistent device addressing without static IPs, I:
@@ -102,6 +110,8 @@ Assigned a fixed IP tied to a MAC address
 Placed the reservation under the correct scope
 
 This mirrors how shared devices are managed in corporate networks.
+
+<img width="862" height="502" alt="DHCP_Reservation" src="https://github.com/user-attachments/assets/bf4cc485-8dda-483f-8fd7-207abd26ae69" />
 
 ## ✅ Configuration Validation
 
