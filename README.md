@@ -81,9 +81,9 @@ Each scope was activated and verified through the DHCP console.
 
 <img width="628" height="391" alt="DHCP_Configured" src="https://github.com/user-attachments/assets/741d4a39-b1cc-4220-a9b1-4cb0f4211819" />
 
-<img width="401" height="456" alt="Lease_Times" src="https://github.com/user-attachments/assets/3e4bf3f9-387f-4f2a-80d8-960a09c8f924" />
+<img width="401" height="456" alt="Lease_Times" src="https://github.com/user-attachments/assets/aa1d4f23-fc60-4259-98a1-46e931fe4ec2" />
 
-<img width="905" height="264" alt="IP_Exclusions" src="https://github.com/user-attachments/assets/ccbfa047-6c88-4f2e-b56b-305623074469" />
+<img width="905" height="264" alt="IP_Exclusions" src="https://github.com/user-attachments/assets/fb1f2d72-aa48-48cd-bf55-0cdc7ba8716c" />
 
 ## ⚙️ DHCP Options Configuration
 
