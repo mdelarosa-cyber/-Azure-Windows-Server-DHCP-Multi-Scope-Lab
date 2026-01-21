@@ -1,5 +1,5 @@
 # 📌 Azure Windows Server DHCP Multi-Scope Lab
-📖 Project Overview
+## 📖 Project Overview
 
 This lab demonstrates hands-on experience configuring a Windows Server DHCP service in Microsoft Azure, simulating how DHCP is deployed and managed in a real corporate network environment.
 
@@ -19,7 +19,7 @@ Validating configuration without client testing
 
 Due to Azure’s platform-managed networking, the lab emphasizes administrative configuration and validation rather than live client lease testing.
 
-🎯 Objectives
+## 🎯 Objectives
 
 The goal of this project was to practice enterprise-style DHCP configuration by:
 
@@ -35,7 +35,7 @@ Creating device reservations
 
 Verifying configuration through server tools
 
-🛠️ Technologies Used
+## 🛠️ Technologies Used
 
 Microsoft Azure
 
@@ -47,7 +47,7 @@ RDP
 
 Azure Virtual Networking
 
-🧱 Lab Architecture
+## 🧱 Lab Architecture
 
 Resource Group: rg-dhcp-lab
 
@@ -61,7 +61,7 @@ Access: RDP (restricted to my IP)
 
 The Windows Server VM hosts the DHCP service and simulates an on-prem DHCP server.
 
-📡 DHCP Scopes Configured
+## 📡 DHCP Scopes Configured
 1. Users LAN
 
 Range: 192.168.1.10 – 192.168.1.200
@@ -118,7 +118,7 @@ Scope: Users LAN
 
 This demonstrates how to maintain consistent IPs without static assignments.
 
-✅ Configuration Validation
+## ✅ Configuration Validation
 
 The DHCP setup was verified using server-side checks:
 
@@ -134,7 +134,7 @@ DHCP service is running without errors
 
 This mirrors real-world hybrid and on-prem DHCP administration tasks.
 
-📚 What I Learned
+## 📚 What I Learned
 
 This lab reinforced:
 
